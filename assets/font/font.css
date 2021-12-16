@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 900;
+    src: local('NunitoSans'), local('NunitoSans-Black'), url(NunitoSans-Black.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 900;
+    src: local('NunitoSans'), local('NunitoSans-BlackItalic'), url(NunitoSans-BlackItalic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('NunitoSans'), local('NunitoSans-Bold'), url(NunitoSans-Bold.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('NunitoSans'), local('NunitoSans-BoldItalic'), url(NunitoSans-BoldItalic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 800;
+    src: local('NunitoSans'), local('NunitoSans-ExtraBold'), url(NunitoSans-ExtraBold.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 800;
+    src: local('NunitoSans'), local('NunitoSans-ExtraBoldItalic'), url(NunitoSans-ExtraBoldItalic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 200;
+    src: local('NunitoSans'), local('NunitoSans-ExtraLight'), url(NunitoSans-ExtraLight.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 200;
+    src: local('NunitoSans'), local('NunitoSans-ExtraLightItalic'), url(NunitoSans-ExtraLightItalic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('NunitoSans'), local('NunitoSans-Italic'), url(NunitoSans-Italic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('NunitoSans'), local('NunitoSans-Light'), url(NunitoSans-Light.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('NunitoSans'), local('NunitoSans-LightItalic'), url(NunitoSans-LightItalic.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('NunitoSans'), local('NunitoSans-Regular'), url(NunitoSans-Regular.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('NunitoSans'), local('NunitoSans-SemiBold'), url(NunitoSans-SemiBold.ttf) format('ttf');
+  }
+
+  @font-face {
+    font-family: 'NunitoSans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('NunitoSans'), local('NunitoSans-SemiBoldItalic'), url(NunitoSans-SemiBoldItalic.ttf) format('ttf');
+  }
