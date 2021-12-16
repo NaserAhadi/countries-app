@@ -1,19 +1,27 @@
 import Vue from 'vue'
 
 const state = () => ({
-  allCountriesInformation: []
+  countriesInformation: []
 })
 
 const mutations = {
-  SET_ALL_COUNTRIES_INFORMATION (state, allCountriesInformation) {
-    Vue.set(state, 'allCountriesInformation', allCountriesInformation)
+  SET_COUNTRIES_INFORMATION (state, countriesInformation) {
+    Vue.set(state, 'countriesInformation', countriesInformation)
   }
 }
 
 const actions = {
   async getAllCountriesInformation (vuexContext) {
     const { data } = await this.$callApiService.homePageService.getAllCountriesData()
-    vuexContext.commit('SET_ALL_COUNTRIES_INFORMATION', data)
+    vuexContext.commit('SET_COUNTRIES_INFORMATION', data)
+  },
+  async getRegionalCountriesInformation (vuexContext, region) {
+    const { data } = await this.$callApiService.homePageService.getRegionalCountriesData(region)
+    vuexContext.commit('SET_COUNTRIES_INFORMATION', data)
+  },
+  async getSearchedCountryInformation (vuexContext, countryName) {
+    const { data } = await this.$callApiService.homePageService.getSearchedCountryData(countryName)
+    vuexContext.commit('SET_COUNTRIES_INFORMATION', data)
   }
 }
 
