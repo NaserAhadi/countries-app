@@ -1,6 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config({ path: '.env.' + process.env.NODE_ENV })
 
 export default {
+  ssr: false,
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - countries-app',
@@ -26,6 +28,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    '~/plugins/service.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,7 +51,10 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/'
+    baseUrl: process.env.BASE_URL,
+    common: {
+      'content- type': 'application/json, text/plain, */* , charset=utf-8'
+    }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
