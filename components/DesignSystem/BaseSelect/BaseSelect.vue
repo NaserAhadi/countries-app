@@ -4,6 +4,7 @@
       outlined
       v-bind="$attrs"
       :items="inputItems"
+      data-testId="base-select"
       @change="sendOutSelectedValue($event)"
     />
   </div>
