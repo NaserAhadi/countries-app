@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import CountryCard from '../CountryCard/CountryCard'
+import CountryCard from './CountryCard/CountryCard'
+
 export default {
   name: 'AllCountriesCards',
   components: {
