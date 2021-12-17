@@ -1,13 +1,33 @@
 .BaseSelect{
+    ::v-deep .v-input__control{
+      .v-input__slot{
+        border-radius: 0.5rem !important;
+
+        .v-label,.v-select__selections {
+          font: 400 0.875rem 'NunitoSans' !important;
+        }
+      }
+    }
+
     .theme--light{
       ::v-deep .v-input__control{
         .v-input__slot{
-          border-radius: 0.5rem !important;
           background-color: #FFF !important;
   
           .v-label,.v-select__selections {
-            font: 400 0.875rem 'NunitoSans' !important;
             color: #373737 !important;
+          }
+        }
+      }
+    }
+
+    .theme--dark{
+      ::v-deep .v-input__control{
+        .v-input__slot{
+          background-color: #444 !important;
+  
+          .v-label,.v-select__selections {
+            color: #fff !important;
           }
         }
       }
@@ -17,5 +37,10 @@
 ::v-deep .theme--light.v-list-item .v-list-item__title, .v-list-item .v-list-item__subtitle {
     font: 400 0.875rem 'NunitoSans' !important;
     color: #373737 !important;
+}
+
+::v-deep .theme--dark.v-list-item .v-list-item__title, .v-list-item .v-list-item__subtitle {
+  font: 400 0.875rem 'NunitoSans' !important;
+  color: #fff !important;
 }
   

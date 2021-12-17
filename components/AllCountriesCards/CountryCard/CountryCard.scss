@@ -1,6 +1,5 @@
 .country-card{
-    background: #FFF;
-    color: #000;
+  
     border-radius: 1rem;
 
     &__title{
@@ -17,6 +16,48 @@
 
             .answer-text{
                 color: #676767
+            }
+        }
+    }
+}
+
+.theme--light{
+    .country-card{
+        background: #FFF;
+        color: #000;
+
+        &__title{
+            color: #000;
+        }
+
+        &__text-wrapper{
+            &__text{
+                color: #373737;
+    
+                .answer-text{
+                    color: #676767
+                }
+            }
+        }
+    }
+}
+
+.theme--dark{
+    .country-card{
+        background: #444;
+        color: #fff;
+
+        &__title{
+            color: #fff;
+        }
+
+        &__text-wrapper{
+            &__text{
+                color: #fff;
+    
+                .answer-text{
+                    color: #ccc
+                }
             }
         }
     }

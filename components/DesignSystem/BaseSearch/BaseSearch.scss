@@ -1,18 +1,44 @@
 .base-search {
+    ::v-deep .v-input__slot {
+      border-radius: 0.5rem ;
+      font: 400 0.875rem 'NunitoSans' !important;
+    }
+
+    ::v-deep .v-label {
+      font: 400 0.875rem 'NunitoSans' !important;
+    }
+
     .theme--light {
       ::v-deep .v-input__slot {
         background-color: #FFF !important;
-        border-radius: 0.5rem ;
-        font: 400 0.875rem 'NunitoSans' !important;
       }
 
       ::v-deep .v-label {
         color: #373737 !important;
-        font: 400 0.875rem 'NunitoSans' !important;
       }
     }
 
     ::v-deep .theme--light.v-input input{
         color: #373737 !important
     }
-  }
+
+    .theme--dark {
+      ::v-deep .v-input__slot {
+        background-color: #444 !important;
+
+        svg{
+          path,circle{
+            stroke: #FFF;
+          }
+        }
+      }
+
+      ::v-deep .v-label {
+        color: #fff !important;
+      }
+    }
+
+    ::v-deep .theme--dark.v-input input{
+        color: #fff !important
+    }
+}

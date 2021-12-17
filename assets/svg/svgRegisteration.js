@@ -1,5 +1,6 @@
 import SearchLight from '@/assets/svg/icon/search/SearchLight.svg?inline'
 import ArrowLeftLight from '@/assets/svg/icon/arrow/ArrowLeftLight.svg?inline'
+import Moon from '~/assets/svg/icon/moon/Moon.svg?inline'
 
 export const searchIcons = {
   light: SearchLight,
@@ -8,4 +9,8 @@ export const searchIcons = {
 
 export const arrowIcon = {
   light: ArrowLeftLight
+}
+
+export const moonIcon = {
+  Moon
 }

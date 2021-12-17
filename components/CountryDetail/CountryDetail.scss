@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: column;
     font: 400 1rem 'NunitoSans';
-    color: #373737;
 
     &__title-row{
         display: flex;
@@ -40,5 +39,37 @@
     &__border-country-row{
       display: flex;
       align-items: center;
+    }
+}
+
+.theme--light{
+    .contry-information{
+        color: #373737;
+
+        &__general-info-row{
+            .answer-text{
+                color: #676767
+            }
+        }
+    }
+}
+
+.theme--dark{
+    .back-link{
+        svg{
+            path{
+                stroke: #fff;
+            }
+        }
+    }
+
+    .contry-information{
+        color: #fff;
+
+        &__general-info-row{
+            .answer-text{
+                color: #ccc
+            }
+        }
     }
 }

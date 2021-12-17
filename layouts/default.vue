@@ -5,8 +5,9 @@
         <span class="header__title">
           Where in the world?
         </span>
-        <span class="header__dark-mode-toggle">
-          Dark mode
+        <span class="header__dark-mode-toggle" @click="toggleDarkMode()">
+          <MoonIcon />
+          <span>Dark Mode</span>
         </span>
       </header>
     </BaseCard>
@@ -20,11 +21,18 @@
 
 <script>
 import BaseCard from '~/components/DesignSystem/BaseCard/BaseCard'
+import { moonIcon } from '~/assets/svg/svgRegisteration'
 
 export default {
   name: 'DefaultLayout',
   components: {
-    BaseCard
+    BaseCard,
+    MoonIcon: moonIcon.Moon
+  },
+  methods: {
+    toggleDarkMode () {
+      this.$vuetify.theme.isDark = !this.$vuetify.theme.isDark
+    }
   }
 }
 </script>

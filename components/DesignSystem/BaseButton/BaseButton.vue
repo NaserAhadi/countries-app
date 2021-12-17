@@ -4,6 +4,7 @@
     class="base-button"
     type="submit"
     depressed
+    elevation="1"
     v-on="$listeners"
   >
     <slot />
