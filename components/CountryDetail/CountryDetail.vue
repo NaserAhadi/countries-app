@@ -1,5 +1,5 @@
 <template>
-  <v-container class="contry-detail-component-container">
+  <v-container>
     <v-row>
       <v-col>
         <nuxt-link to="/" class="back-link">
@@ -11,21 +11,25 @@
       </v-col>
     </v-row>
     <v-row class="flag-and-information-container">
-      <v-col cols="5">
-        <BaseCard>
+      <v-col lg="5" cols="12">
+        <BaseCard
+          class="flag-card"
+        >
           <v-img
             :src="filteredCountryData.flags.svg"
+            height="400"
+            :aspect-ratio="4/3"
           />
         </BaseCard>
       </v-col>
-      <v-col cols="5" class="contry-information">
+      <v-col lg="6" cols="12" class="contry-information">
         <v-row class="contry-information__title-row">
           <v-col>
             <span class="title">{{ filteredCountryData.name }}</span>
           </v-col>
         </v-row>
         <v-row class="contry-information__general-info-row">
-          <v-col>
+          <v-col lg="6" cols="12">
             <div class="my-2">
               Native Name: <span class="answer-text">{{ filteredCountryData.nativeName }}</span>
             </div>
@@ -42,7 +46,7 @@
               Captial: <span class="answer-text">{{ capital }}</span>
             </div>
           </v-col>
-          <v-col>
+          <v-col lg="6" cols="12">
             <div class="my-2">
               Top Level Domain: <span class="answer-text">{{ filteredCountryData.topLevelDomain[0] }}</span>
             </div>
@@ -128,7 +132,11 @@ export default {
 .flag-and-information-container{
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
+    margin-top: 7rem;
+
+    .flag-card{
+        border-radius: 1rem;
+    }
 }
 
 .contry-information{
