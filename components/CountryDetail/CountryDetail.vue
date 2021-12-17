@@ -1,0 +1,164 @@
+<template>
+  <v-container class="contry-detail-component-container">
+    <v-row>
+      <v-col>
+        <nuxt-link to="/" class="back-link">
+          <BaseButton>
+            <ArrowLeftIcon />
+            Back
+          </BaseButton>
+        </nuxt-link>
+      </v-col>
+    </v-row>
+    <v-row class="flag-and-information-container">
+      <v-col cols="5">
+        <BaseCard>
+          <v-img
+            :src="filteredCountryData.flags.svg"
+          />
+        </BaseCard>
+      </v-col>
+      <v-col cols="5" class="contry-information">
+        <v-row class="contry-information__title-row">
+          <v-col>
+            <span class="title">{{ filteredCountryData.name }}</span>
+          </v-col>
+        </v-row>
+        <v-row class="contry-information__general-info-row">
+          <v-col>
+            <div class="my-2">
+              Native Name: <span class="answer-text">{{ filteredCountryData.nativeName }}</span>
+            </div>
+            <div class="my-2">
+              Population: <span class="answer-text">{{ populationNumberWithSeparator }}</span>
+            </div>
+            <div class="my-2">
+              Region: <span class="answer-text">{{ filteredCountryData.region }}</span>
+            </div>
+            <div class="my-2">
+              Sub Region: <span class="answer-text">{{ filteredCountryData.subregion }}</span>
+            </div>
+            <div class="my-2">
+              Captial: <span class="answer-text">{{ capital }}</span>
+            </div>
+          </v-col>
+          <v-col>
+            <div class="my-2">
+              Top Level Domain: <span class="answer-text">{{ filteredCountryData.topLevelDomain[0] }}</span>
+            </div>
+            <div class="my-2">
+              Currencies: <span class="answer-text">{{ filteredCountryData.currencies[0].name }}</span>
+            </div>
+            <div class="my-2">
+              Languages: <span class="answer-text">{{ languages }}</span>
+            </div>
+          </v-col>
+        </v-row>
+        <v-row class="contry-information__border-country-row">
+          <v-col>
+            <div>
+              Border Countries:
+              <span
+                v-for="(borderCountry, index) in filteredCountryData.borders"
+                :key="index"
+              >
+                <BaseButton
+                  :to="`${convertNameOfBorderCountryToLowerCase(borderCountry)}`"
+                >
+                  {{ findNameOfBorderCountry(borderCountry) }}
+                </BaseButton>
+              </span>
+            </div>
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+import BaseCard from '~/components/DesignSystem/BaseCard/BaseCard'
+import BaseButton from '~/components/DesignSystem/BaseButton/BaseButton'
+import { arrowIcon } from '~/assets/svg/svgRegisteration'
+
+export default {
+  name: 'CountryDetail',
+  components: {
+    BaseCard,
+    BaseButton,
+    ArrowLeftIcon: arrowIcon.light
+  },
+  props: {
+    filteredCountryData: {
+      type: Object,
+      default: () => {}
+    },
+    borderCountriesData: {
+      type: Array,
+      default: () => []
+    }
+  },
+  computed: {
+    languages () {
+      return this.filteredCountryData.languages.map(lang => lang.name).join(', ')
+    },
+    populationNumberWithSeparator () {
+      return this.filteredCountryData.population.toLocaleString()
+    },
+    capital () {
+      return this.filteredCountryData.capital ? this.filteredCountryData.capital : ' - '
+    }
+  },
+  methods: {
+    findNameOfBorderCountry (borderCountry) {
+      return this.borderCountriesData.find(el => el.alpha3Code === borderCountry).name
+    },
+    convertNameOfBorderCountryToLowerCase (borderCountry) {
+      return this.findNameOfBorderCountry(borderCountry).toLowerCase()
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.back-link{
+    text-decoration: none;
+}
+
+.flag-and-information-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.contry-information{
+    display: flex;
+    flex-direction: column;
+    font: 400 1rem 'NunitoSans';
+    color: #373737;
+
+    &__title-row{
+        display: flex;
+        align-items: flex-end;
+
+        .title{
+            font: 800 2rem 'NunitoSans' !important;
+            margin-bottom: 1.5rem
+        }
+    }
+
+    &__general-info-row{
+        display: flex;
+        align-items: center;
+
+        .answer-text{
+            color: #676767
+        }
+    }
+
+    &__border-country-row{
+      display: flex;
+      align-items: center;
+    }
+}
+</style>
