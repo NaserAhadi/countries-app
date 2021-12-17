@@ -25,7 +25,7 @@ import RegionFilter from '~/components/RegionFilter/RegionFilter'
 import SearchCountry from '~/components/SearchCountry/SearchCountry'
 
 export default {
-  name: 'IndexPage',
+  name: 'HomePage',
   components: {
     AllCountriesCards,
     RegionFilter,
