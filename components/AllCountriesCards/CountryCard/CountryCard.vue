@@ -49,6 +49,7 @@ export default {
 .country-card{
     background: #FFF;
     color: #000;
+    border-radius: 1rem;
 
     &__title{
         color: #000;
