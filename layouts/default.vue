@@ -27,7 +27,7 @@ export default {
   name: 'DefaultLayout',
   components: {
     BaseCard,
-    MoonIcon: moonIcon.Moon
+    MoonIcon: moonIcon.MoonIcon
   },
   methods: {
     toggleDarkMode () {

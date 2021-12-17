@@ -6,19 +6,19 @@
       v-on="$listeners"
     >
       <template #prepend-inner>
-        <SearchIcons />
+        <SearchIcon />
       </template>
     </v-text-field>
   </div>
 </template>
 
 <script>
-import { searchIcons } from '~/assets/svg/svgRegisteration'
+import { searchIcon } from '~/assets/svg/svgRegisteration'
 
 export default {
   name: 'BaseSearch',
   components: {
-    SearchIcons: searchIcons.light
+    SearchIcon: searchIcon.SearchIcon
   }
 }
 </script>

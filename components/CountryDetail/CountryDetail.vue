@@ -90,7 +90,7 @@ export default {
   components: {
     BaseCard,
     BaseButton,
-    ArrowLeftIcon: arrowIcon.light
+    ArrowLeftIcon: arrowIcon.ArrowLeftIcon
   },
   props: {
     filteredCountryData: {

@@ -1,16 +1,15 @@
-import SearchLight from '@/assets/svg/icon/search/SearchLight.svg?inline'
-import ArrowLeftLight from '@/assets/svg/icon/arrow/ArrowLeftLight.svg?inline'
-import Moon from '~/assets/svg/icon/moon/Moon.svg?inline'
+import SearchIcon from '~/assets/svg/icon/search/SearchIcon.svg?inline'
+import ArrowLeftIcon from '~/assets/svg/icon/arrow/ArrowLeftIcon.svg?inline'
+import MoonIcon from '~/assets/svg/icon/moon/MoonIcon.svg?inline'
 
-export const searchIcons = {
-  light: SearchLight,
-  dark: null
+export const searchIcon = {
+  SearchIcon
 }
 
 export const arrowIcon = {
-  light: ArrowLeftLight
+  ArrowLeftIcon
 }
 
 export const moonIcon = {
-  Moon
+  MoonIcon
 }
