@@ -10,13 +10,13 @@
     <v-card-text class="country-card__text-wrapper">
       <v-row class="country-card__text-wrapper__text">
         <v-col cols="12" class="py-0">
-          Population: <span class="second-part-text">{{ populationNumberWithSeparator }}</span>
+          Population: <span class="answer-text">{{ populationNumberWithSeparator }}</span>
         </v-col>
         <v-col cols="12" class="py-0">
-          Region: <span class="second-part-text">{{ countrySpecification.region }}</span>
+          Region: <span class="answer-text">{{ countrySpecification.region }}</span>
         </v-col>
         <v-col cols="12" class="py-0">
-          Capital: <span class="second-part-text">{{ countrySpecification.capital }}</span>
+          Capital: <span class="answer-text">{{ countrySpecification.capital }}</span>
         </v-col>
       </v-row>
     </v-card-text>
@@ -62,8 +62,8 @@ export default {
             color: #373737;
             font: 400 0.875rem 'NunitoSans';
 
-            .second-part-text{
-                color: #636363
+            .answer-text{
+                color: #676767
             }
         }
     }
