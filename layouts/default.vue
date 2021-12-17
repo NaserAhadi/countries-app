@@ -1,13 +1,15 @@
 <template>
   <v-app>
-    <header class="header">
-      <span class="header__title">
-        Where in the world?
-      </span>
-      <span class="header__dark-mode-toggle">
-        Dark mode
-      </span>
-    </header>
+    <BaseCard>
+      <header class="header">
+        <span class="header__title">
+          Where in the world?
+        </span>
+        <span class="header__dark-mode-toggle">
+          Dark mode
+        </span>
+      </header>
+    </BaseCard>
     <v-main class="main-content">
       <v-container fluid>
         <Nuxt />
@@ -17,12 +19,12 @@
 </template>
 
 <script>
+import BaseCard from '~/components/DesignSystem/BaseCard/BaseCard'
+
 export default {
   name: 'DefaultLayout',
-  data () {
-    return {
-
-    }
+  components: {
+    BaseCard
   }
 }
 </script>
@@ -48,5 +50,17 @@ export default {
 
 .main-content{
   background: #FAFAFA;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header{
+    &__title{
+      font: 600 1rem 'NunitoSans';
+    }
+
+     &__dark-mode-toggle{
+      font: 400 0.875rem 'NunitoSans';
+    }
+  }
 }
 </style>
