@@ -1,15 +1,15 @@
 <template>
   <v-container fluid class="home-page">
-    <v-row class="d-flex justify-space-between px-3">
-      <v-col cols="4">
+    <v-row class="search-and-filter-container">
+      <v-col lg="4" cols="12">
         <SearchCountry />
       </v-col>
-      <v-col cols="3">
+      <v-col lg="3" cols="12">
         <RegionFilter />
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" class="my-col">
+      <v-col cols="12">
         <AllCountriesCards
           :countries-data="countriesInformation"
         />
@@ -46,5 +46,15 @@ export default {
 <style lang="scss" scoped>
 .home-page{
   padding: 3rem;
+}
+
+.search-and-filter-container{
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  padding: 0 0.75rem;
+  top: 0;
+  z-index: 1;
+  background: #FAFAFA;
 }
 </style>
