@@ -18,7 +18,7 @@ $ npm run generate
 ```
 
 ## Brief Explanation About Project
--> in this project I used nuxt.js framework and vuetify UI component.
+-> In this project I used Nuxt.js framework and Vuetify UI component.
 
 -> I did my best to write clean code and also I created design system which contains base component.
 
@@ -26,9 +26,9 @@ $ npm run generate
 
 -> I didn't use any global style and each component contains own styles so the styles are loaded whenever they're really needed.
 
--> project is responsive for mobile and desktop mode in demanded width and it has dark mode which user can toggle between dark mode and light mode.
+-> Project is responsive for mobile and desktop mode in demanded width and it has dark mode which user can toggle between dark mode and light mode.
 
--> some base component has unit test but there wasn't enough time to write more unit test.
+-> Some base component has unit test but there wasn't enough time to write more unit test.
 
 -> Api services are based on repository service pattern.
 
