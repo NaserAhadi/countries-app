@@ -1,14 +1,18 @@
 <template>
-  <v-container fluid class="all-countries-cards">
+  <v-container fluid>
     <v-row>
       <v-col
-
-        v-for="(item, index) in countriesData"
+        v-for="(country, index) in countriesData"
         :key="index"
         cols="12"
         md="3"
       >
-        <CountryCard :country-specification="item" />
+        <nuxt-link
+          :to="`${country.name.toLowerCase()}`"
+          class="country-card-link"
+        >
+          <CountryCard :country-specification="country" />
+        </nuxt-link>
       </v-col>
     </v-row>
   </v-container>
@@ -32,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .all-countries-cards{
-//     width: 100%;
-// }
+.country-card-link{
+  text-decoration: none;
+}
 </style>
