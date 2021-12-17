@@ -46,27 +46,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.country-card{
-    background: #FFF;
-    color: #000;
-    border-radius: 1rem;
-
-    &__title{
-        color: #000;
-        font: 600 1rem 'NunitoSans';
-    }
-
-    &__text-wrapper{
-        padding: 0.8rem 1rem 2.5rem;
-
-        &__text{
-            color: #373737;
-            font: 400 0.875rem 'NunitoSans';
-
-            .answer-text{
-                color: #676767
-            }
-        }
-    }
-}
+@import './CountryCard.scss';
 </style>

@@ -125,48 +125,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.back-link{
-    text-decoration: none;
-}
-
-.flag-and-information-container{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 7rem;
-
-    .flag-card{
-        border-radius: 1rem;
-    }
-}
-
-.contry-information{
-    display: flex;
-    flex-direction: column;
-    font: 400 1rem 'NunitoSans';
-    color: #373737;
-
-    &__title-row{
-        display: flex;
-        align-items: flex-end;
-
-        .title{
-            font: 800 2rem 'NunitoSans' !important;
-            margin-bottom: 1.5rem
-        }
-    }
-
-    &__general-info-row{
-        display: flex;
-        align-items: center;
-
-        .answer-text{
-            color: #676767
-        }
-    }
-
-    &__border-country-row{
-      display: flex;
-      align-items: center;
-    }
-}
+@import './CountryDetail.scss';
 </style>

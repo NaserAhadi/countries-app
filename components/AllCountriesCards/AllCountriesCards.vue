@@ -36,7 +36,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.country-card-link{
-  text-decoration: none;
-}
+@import './AllCountriesCards.scss';
 </style>

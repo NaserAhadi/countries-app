@@ -44,17 +44,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home-page{
-  padding: 3rem;
-}
-
-.search-and-filter-container{
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  padding: 0 0.75rem;
-  top: 0;
-  z-index: 1;
-  background: #FAFAFA;
-}
+@import './index.scss';
 </style>
