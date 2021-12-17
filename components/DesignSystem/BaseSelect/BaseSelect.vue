@@ -15,7 +15,7 @@ export default {
   props: {
     inputItems: {
       type: Array,
-      default: () => {}
+      default: () => []
     }
   },
   methods: {
